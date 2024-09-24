@@ -4,7 +4,7 @@
 
 4.1.2. Клонировать на ПК задание **Бизнес кейс Umbrella** в домашний каталог ВМ. 
 
-`git clone https://github.com/BosenkoTM/workshop-on-ETL.git`
+`git clone https://github.com/BosenkoTM/DCCAS`
 
 4.1.3. Запустить контейнер с кейсом, изучить и описать основные элементы интерфейса `Apache Airflow`. 
 
