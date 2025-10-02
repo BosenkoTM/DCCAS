@@ -234,7 +234,7 @@ sudo docker compose exec postgres psql -U analyst -d airline_analytics
 
 ---
 
-### ##  сда и оценка работы
+### Варианты заданий и критерии оценки
 
 Варианты заданий для выполнения практической работы доступны по ссылке:
 **[Скачать варианты заданий](http://95.131.149.21/moodle/pluginfile.php/3452/mod_assign/introattachment/0/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%203.pdf?forcedownload=1)**
@@ -270,3 +270,4 @@ sudo docker compose exec postgres psql -U analyst -d airline_analytics
 *   **Качество документации (20%)**
     *   `README.md` содержит четкие и полные инструкции по запуску.
     *   Ясно описана цель работы и итоговые выводы.
+
