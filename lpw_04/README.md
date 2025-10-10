@@ -1,4 +1,4 @@
-# Лабораторная работа №4. Разработка аналитического дашборда для бизнес-кейса
+# Л+П №4. Разработка аналитического дашборда для бизнес-кейса
 
 ## Цель работы
 
@@ -22,8 +22,8 @@
 
 **Исходные данные**
 
-*   **Kaggle Dataset**: `harshitagpt/us-presidents` — исторические данные о президентах США
-*   **Поля**: S.No., start, end, president, prior, party, vice
+*   **Kaggle Dataset**. `harshitagpt/us-presidents` — исторические данные о президентах США
+*   **Поля**. S.No., start, end, president, prior, party, vice
 
 **Бизнес-логика расчета**
 
@@ -44,24 +44,24 @@ years_in_office = EXTRACT(YEAR FROM AGE(end_date, start_date))
 │                           DOCKER COMPOSE ENVIRONMENT                        │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                                                                             │
-│  ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐         │
-│  │   PostgreSQL    │    │   Apache        │    │   Apache        │         │
-│  │   (Airflow)     │    │   Airflow       │    │   Superset      │         │
-│  │                 │    │                 │    │                 │         │
-│  │ Port: 5432      │    │ Port: 8080      │    │ Port: 8088      │         │
-│  │ User: airflow   │◄───┤                 │    │ User: admin     │         │
-│  │ DB: airflow     │    │                 │    │ Pass: admin     │         │
-│  └─────────────────┘    └─────────────────┘    └─────────────────┘         │
-│                                   │                        │               │
-│                                   │                        │               │
+│  ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐          │
+│  │   PostgreSQL    │    │   Apache        │    │   Apache        │          │
+│  │   (Airflow)     │    │   Airflow       │    │   Superset      │          │
+│  │                 │    │                 │    │                 │          │
+│  │ Port: 5432      │    │ Port: 8080      │    │ Port: 8088      │          │
+│  │ User: airflow   │◄───┤                 │    │ User: admin     │          │
+│  │ DB: airflow     │    │                 │    │ Pass: admin     │          │
+│  └─────────────────┘    └─────────────────┘    └─────────────────┘          │
+│                                   │                        │                │
+│                                   │                        │                │
 │                         ┌─────────▼─────────┐    ┌────────▼─────────┐       │
-│                         │   PostgreSQL      │    │     Redis       │       │
-│                         │   (Analytics)     │    │   (Cache)       │       │
-│                         │                   │    │                 │       │
-│                         │ Port: 5433        │    │ Port: 6379      │       │
-│                         │ User: analytics    │    │                 │       │
-│                         │ DB: analytics     │    │                 │       │
-│                         └───────────────────┘    └─────────────────┘       │
+│                         │   PostgreSQL      │    │     Redis        │       │
+│                         │   (Analytics)     │    │   (Cache)        │       │
+│                         │                   │    │                  │       │
+│                         │ Port: 5433        │    │ Port: 6379       │       │
+│                         │ User: analytics   │    │                  │       │
+│                         │ DB: analytics     │    │                  │       │
+│                         └───────────────────┘    └─────────────────┘        │
 └─────────────────────────────────────────────────────────────────────────────┘
 
 ┌─────────────────────────────────────────────────────────────────────────────┐
@@ -105,7 +105,7 @@ years_in_office = EXTRACT(YEAR FROM AGE(end_date, start_date))
                     TRANSFORM PHASE
                 ┌─────────────────┐
                 │create_datamart  │
-                │ (SQL VIEW)       │
+                │ (SQL VIEW)      │
                 └─────────────────┘
                          │
                 DASHBOARD PHASE
@@ -120,11 +120,11 @@ years_in_office = EXTRACT(YEAR FROM AGE(end_date, start_date))
 
 Airflow подключается к аналитической базе данных PostgreSQL через коннектор `analytics_postgres`:
 
-- **Host**: analytics_postgres
-- **Port**: 5432
-- **Database**: analytics
-- **Username**: analytics
-- **Password**: analytics
+- **Host**. analytics_postgres
+- **Port**. 5432
+- **Database**. analytics
+- **Username**. analytics
+- **Password**. analytics
 
 ## Технологический стек
 
@@ -147,30 +147,30 @@ Airflow подключается к аналитической базе данн
 │                    ANALYTICS DATABASE                       │
 ├─────────────────────────────────────────────────────────────┤
 │                                                             │
-│  ┌─────────────────────────────────────────────────────┐   │
-│  │              raw_us_presidents                      │   │
-│  │                                                     │   │
-│  │  id (SERIAL PRIMARY KEY)                           │   │
-│  │  s_no (INTEGER)                                     │   │
-│  │  start_date (TEXT)                                  │   │
-│  │  end_date (TEXT)                                    │   │
-│  │  president (TEXT)                                   │   │
-│  │  prior (TEXT)                                       │   │
-│  │  party (TEXT)                                       │   │
-│  │  vice (TEXT)                                        │   │
-│  │  created_at (TIMESTAMP)                             │   │
-│  └─────────────────────────────────────────────────────┘   │
-│                              │                             │
-│                              │                             │
-│  ┌─────────────────────────────────────────────────────┐   │
-│  │            us_presidents_datamart                    │   │
-│  │                   (VIEW)                            │   │
-│  │                                                     │   │
-│  │  president (TEXT)                                   │   │
-│  │  party (TEXT)                                       │   │
-│  │  inauguration_age (NUMERIC)                        │   │
-│  │  years_in_office (NUMERIC)                          │   │
-│  └─────────────────────────────────────────────────────┘   │
+│  ┌─────────────────────────────────────────────────────┐    │
+│  │              raw_us_presidents                      │    │
+│  │                                                     │    │
+│  │  id (SERIAL PRIMARY KEY)                            │    │
+│  │  s_no (INTEGER)                                     │    │
+│  │  start_date (TEXT)                                  │    │
+│  │  end_date (TEXT)                                    │    │
+│  │  president (TEXT)                                   │    │
+│  │  prior (TEXT)                                       │    │
+│  │  party (TEXT)                                       │    │
+│  │  vice (TEXT)                                        │    │
+│  │  created_at (TIMESTAMP)                             │    │
+│  └─────────────────────────────────────────────────────┘    │
+│                              │                              │
+│                              │                              │
+│  ┌─────────────────────────────────────────────────────┐    │
+│  │            us_presidents_datamart                   │    │
+│  │                   (VIEW)                            │    │
+│  │                                                     │    │
+│  │  president (TEXT)                                   │    │
+│  │  party (TEXT)                                       │    │
+│  │  inauguration_age (NUMERIC)                         │    │
+│  │  years_in_office (NUMERIC)                          │    │
+│  └─────────────────────────────────────────────────────┘    │
 │                                                             │
 └─────────────────────────────────────────────────────────────┘
 ```
@@ -268,11 +268,11 @@ sudo docker ps
     1.  Перейдите в **Dashboards**
     2.  Нажмите **+ Dashboard**
     3.  Создайте 5 обязательных типов чартов:
-        - **Индикатор**: Средний возраст при инаугурации
-        - **Столбчатая диаграмма**: Количество президентов по партиям
-        - **Круговая диаграмма**: Доли по партиям
-        - **Комбинированная диаграмма**: Средний возраст (столбцы) и среднее количество лет в офисе (линия) по партиям
-        - **Линейная диаграмма**: Возраст при инаугурации по хронологии
+        - **Индикатор**. Средний возраст при инаугурации
+        - **Столбчатая диаграмма**. Количество президентов по партиям
+        - **Круговая диаграмма**. Доли по партиям
+        - **Комбинированная диаграмма**. Средний возраст (столбцы) и среднее количество лет в офисе (линия) по партиям
+        - **Линейная диаграмма**. Возраст при инаугурации по хронологии
     4.  Добавьте фильтры по партиям
 
 ### Шаг 4. Остановка сервисов
@@ -333,12 +333,12 @@ sudo docker compose down
 
 Проект содержит следующие файлы:
 
-*   **Python-файл DAG**: `dags/us_presidents_dag.py`
-*   **SQL-файл для витрины данных**: `dags/datamart_variant_30.sql`
-*   **Конфигурация инфраструктуры**: `docker-compose.yml`
-*   **Зависимости**: `requirements.txt`
-*   **Kaggle API ключ**: `kaggle.json` (не включать в Git!)
-*   **Скрипт проверки окружения**: `check_environment.sh`
+*   **Python-файл DAG**. `dags/us_presidents_dag.py`
+*   **SQL-файл для витрины данных**. `dags/datamart_variant_30.sql`
+*   **Конфигурация инфраструктуры**. `docker-compose.yml`
+*   **Зависимости**. `requirements.txt`
+*   **Kaggle API ключ**. `kaggle.json` (не включать в Git!)
+*   **Скрипт проверки окружения**. `check_environment.sh`
 
 ## Описание проделанной работы
 
@@ -473,4 +473,5 @@ COMMENT ON VIEW us_presidents_datamart IS 'Витрина данных для а
 * 📈 **Интерактивное исследование** данных через фильтры
 * ⏰ **Сокращение времени** на подготовку аналитических отчетов
 * 🔍 **Выявление закономерностей** в характеристиках президентов
+
 
