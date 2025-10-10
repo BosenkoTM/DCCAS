@@ -41,11 +41,3 @@
 *   Симбиоз аналитика и AI в BI-задачах.
 
 ---
-
-## **Дополнительные материалы и источники**
-
-| Тема лекции | Описание материалов | Ссылки на источники |
-| :--- | :--- | :--- |
-| **Лекция 1.** Сбор данных | Обзор методов сбора данных, веб-скрапинг, HTML, XML, регулярные выражения, `BeautifulSoup`, AI-ассистенты. | Python Web Scraping Tutorial — SerpApi, 2025<br>Beautiful Soup пошаговый гайд — UserReady, 2025<br>Python BeautifulSoup полный учебник — Crawlbase, 2024<br>Видео «How to Build a Web Scraper Using BeautifulSoup» — YouTube, 2025 |
-| **Лекция 2.** Консолидация данных | Процесс ETL, трансформация с `Pandas`, `Cleanlab` для качества данных, оркестрация `Apache Airflow`, AI в трансформации. | ETL и Pandas: документация и примеры — Pandas<br>Cleanlab — автоматическое качество данных<br>Apache Airflow — официальный сайт<br>Статья на Habr о Pandas и очистке данных, 2024 |
-| **Лекция 3.** Аналитика данных | Введение в BI и визуализацию, интерфейс `Superset`, создание дашбордов, AI для SQL-генерации. | Официальный сайт Apache Superset<br>Документация по Superset<br>AI in BI: Text-to-SQL Demo — Medium, 2024<br>Видео-гайд по Apache Superset — YouTube, 2024 |
