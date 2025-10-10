@@ -229,6 +229,8 @@ sudo docker ps
     ```
     Должны быть запущены: `webserver`, `scheduler`, `postgres`, `analytics_postgres`, `superset`, `redis`.
 
+
+
 ### Шаг 2. Работа с Apache Airflow
 
 *   **Доступ к веб-интерфейсу**:
@@ -279,6 +281,11 @@ sudo docker ps
 
 ```bash
 sudo docker compose down
+```
+Очистка после работы
+
+```bash
+sudo ./cleanup.sh
 ```
 
 ### Устранение неполадок (Ubuntu 20.04)
@@ -513,6 +520,7 @@ COMMENT ON VIEW us_presidents_datamart IS 'Витрина данных для а
 
 Варианты заданий для выполнения лабораторной работы доступны по ссылке:
 **[Скачать варианты заданий](http://95.131.149.21/moodle/mod/assign/view.php?id=2108)**
+
 
 
 
