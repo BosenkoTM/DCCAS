@@ -136,18 +136,19 @@ years_in_office = EXTRACT(YEAR FROM AGE(end_date, start_date))
 ## Быстрый старт
 
 ### 1. Настройка Kaggle API
-    ```bash
+```bash
 chmod +x setup_kaggle.sh
 ./setup_kaggle.sh
-    ```
+```
 
 ### 2. Запуск проекта
-    ```bash
+```bash
     sudo docker compose up -d
-    ```
+```
 
 ### 3. Проверка статуса
-    ```bash
+
+```bash
 sudo docker compose ps
 ```
 
@@ -376,4 +377,5 @@ sudo docker compose up -d
 
 Варианты заданий для выполнения лабораторной работы доступны по ссылке:
 **[Скачать варианты заданий](http://95.131.149.21/moodle/mod/assign/view.php?id=2108)**
+
 
