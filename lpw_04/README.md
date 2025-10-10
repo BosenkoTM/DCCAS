@@ -41,25 +41,25 @@ years_in_office = EXTRACT(YEAR FROM AGE(end_date, start_date))
 │                           DOCKER COMPOSE ENVIRONMENT                        │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                                                                             │
-│  ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐         │
-│  │   PostgreSQL    │    │   Apache        │    │   Apache        │         │
-│  │   (Airflow)     │    │   Airflow       │    │   Superset      │         │
-│  │                 │    │                 │    │                 │         │
-│  │ • Metadata      │    │ • DAGs          │    │ • Dashboards    │         │
-│  │ • Connections   │    │ • Tasks         │    │ • Charts        │         │
-│  │ • Variables     │    │ • XComs         │    │ • Datasets      │         │
-│  └─────────────────┘    └─────────────────┘    └─────────────────┘         │
+│  ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐          │
+│  │   PostgreSQL    │    │   Apache        │    │   Apache        │          │
+│  │   (Airflow)     │    │   Airflow       │    │   Superset      │          │
+│  │                 │    │                 │    │                 │          │
+│  │ • Metadata      │    │ • DAGs          │    │ • Dashboards    │          │
+│  │ • Connections   │    │ • Tasks         │    │ • Charts        │          │
+│  │ • Variables     │    │ • XComs         │    │ • Datasets      │          │
+│  └─────────────────┘    └─────────────────┘    └─────────────────┘          │
 │         │                         │                         │               │
 │         └─────────────────────────┼─────────────────────────┘               │
 │                                   │                                         │
-│  ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐         │
-│  │   PostgreSQL    │    │     Redis       │    │    pgAdmin      │         │
-│  │   (Analytics)   │    │                 │    │                 │         │
-│  │                 │    │ • Cache         │    │ • DB Admin      │         │
-│  │ • Raw Data      │    │ • Sessions      │    │ • Query Tool    │         │
-│  │ • Data Mart     │    │ • Background    │    │ • Schema View    │         │
-│  │ • Views         │    │   Tasks         │    │                 │         │
-│  └─────────────────┘    └─────────────────┘    └─────────────────┘         │
+│  ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐          │
+│  │   PostgreSQL    │    │     Redis       │    │    pgAdmin      │          │
+│  │   (Analytics)   │    │                 │    │                 │          │
+│  │                 │    │ • Cache         │    │ • DB Admin      │          │
+│  │ • Raw Data      │    │ • Sessions      │    │ • Query Tool    │          │
+│  │ • Data Mart     │    │ • Background    │    │ • Schema View   │          │
+│  │ • Views         │    │   Tasks         │    │                 │          │
+│  └─────────────────┘    └─────────────────┘    └─────────────────┘          │
 │                                                                             │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
@@ -68,7 +68,7 @@ years_in_office = EXTRACT(YEAR FROM AGE(end_date, start_date))
 
 ```
 ┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐
-│   Kaggle    │───▶│   Airflow   │───▶│ PostgreSQL  │───▶│  Superset   │
+│   Kaggle    │───▶│   Airflow   │───▶│ PostgreSQL │──▶│  Superset   │
 │   Dataset   │    │   Extract   │    │   Load      │    │ Visualize   │
 │             │    │   Transform │    │   Transform │    │             │
 └─────────────┘    └─────────────┘    └─────────────┘    └─────────────┘
@@ -376,3 +376,4 @@ sudo docker compose up -d
 
 Варианты заданий для выполнения лабораторной работы доступны по ссылке:
 **[Скачать варианты заданий](http://95.131.149.21/moodle/mod/assign/view.php?id=2108)**
+
