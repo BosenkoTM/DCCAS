@@ -224,13 +224,6 @@ sudo docker compose logs postgres
 sudo docker compose exec postgres psql -U analyst -d airline_analytics
 ```
 
-## 👥 Авторы
-
-Практическая работа выполнена в рамках курса "Программные средства консолидации данных" МГПУ.
-
-## 📄 Лицензия
-
-Конечно, вот короткий раздел для `README.md` на GitHub, описывающий материалы и критерии оценки.
 
 ---
 
@@ -270,4 +263,5 @@ sudo docker compose exec postgres psql -U analyst -d airline_analytics
 *   **Качество документации (20%)**
     *   `README.md` содержит четкие и полные инструкции по запуску.
     *   Ясно описана цель работы и итоговые выводы.
+
 
