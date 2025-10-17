@@ -146,8 +146,8 @@ sudo docker compose ps
 ### Шаг 1: Подключение к базе данных
 
 1. Откройте Superset: http://localhost:8088
-2. Перейдите к подключениям: ⚙️ Settings -> Database Connections
-3. Добавьте базу данных: Нажмите + DATABASE
+2. Перейдите к подключениям: ⚙️ Settings -> Data
+3. Добавьте базу данных: Нажмите + Create Dataset
 4. Заполните форму "Connect a database":
 
 ![Подключение к базе данных](./img/create_conn_superset_sql_01.jpg)
@@ -387,6 +387,7 @@ sudo docker compose up -d
 
 Варианты заданий для выполнения лабораторной работы доступны по ссылке:
 **[Скачать варианты заданий](http://95.131.149.21/moodle/mod/assign/view.php?id=2108)**
+
 
 
 
