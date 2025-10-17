@@ -52,14 +52,14 @@ years_in_office = EXTRACT(YEAR FROM AGE(end_date, start_date))
 │         │                         │                         │               │
 │         └─────────────────────────┼─────────────────────────┘               │
 │                                   │                                         │
-│  ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐          │
-│  │   PostgreSQL    │    │     Redis       │    │    pgAdmin      │          │
-│  │   (Analytics)   │    │                 │    │                 │          │
-│  │                 │    │ • Cache         │    │ • DB Admin      │          │
-│  │ • Raw Data      │    │ • Sessions      │    │ • Query Tool    │          │
-│  │ • Data Mart     │    │ • Background    │    │ • Schema View   │          │
-│  │ • Views         │    │   Tasks         │    │                 │          │
-│  └─────────────────┘    └─────────────────┘    └─────────────────┘          │
+│  ┌─────────────────┐        ┌─────────────────┐                             │
+│  │   PostgreSQL    │        │    pgAdmin      │                             │
+│  │   (Analytics)   │        │                 │                             │
+│  │                 │        │ • DB Admin      │                             │
+│  │ • Raw Data      │        │ • Query Tool    │                             │
+│  │ • Data Mart     │        │ • Schema View   │                             │
+│  │ • Views         │        │                 │                             │
+│  └─────────────────┘        └─────────────────┘                             │
 │                                                                             │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
@@ -377,5 +377,6 @@ sudo docker compose up -d
 
 Варианты заданий для выполнения лабораторной работы доступны по ссылке:
 **[Скачать варианты заданий](http://95.131.149.21/moodle/mod/assign/view.php?id=2108)**
+
 
 
